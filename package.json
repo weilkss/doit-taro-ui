@@ -1,0 +1,98 @@
+{
+  "name": "doit-taro-ui",
+  "version": "0.0.1",
+  "main": "lib/index.js",
+  "type": "lib/index.d.ts",
+  "description": "doit-taro-ui 一款基于taro的react版本组件库",
+  "files": [
+    "lib",
+    "types"
+  ],
+  "sideEffects": [
+    "*.less",
+    "*.css"
+  ],
+  "scripts": {
+    "build": "yarn run clean && tsc --project ./tsconfig.json && npm run copy",
+    "lint": "eslint ./packages --fix",
+    "test": "cross-env NODE_ENV=test && jest --coverage",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
+    "clean": "rimraf lib coverage",
+    "commit": "git-cz",
+    "copy": "copyfiles -u 1 packages/components/**/*.less lib/ -V && copyfiles -u 1 packages/types/*.d.ts lib/ -V"
+  },
+  "keywords": [
+    "taro",
+    "doit",
+    "doitjs",
+    "doit-taro-ui"
+  ],
+  "author": "weilkss",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.11.1",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/preset-react": "^7.10.4",
+    "@babel/preset-typescript": "^7.10.4",
+    "@commitlint/cli": "^9.1.1",
+    "@commitlint/config-conventional": "^9.1.1",
+    "@tarojs/components": "^3.0.7",
+    "@tarojs/react": "3.0.0-rc.4",
+    "@tarojs/taro": "3.0.0-rc.4",
+    "@types/node": "^14.0.13",
+    "@types/react": "^16.9.36",
+    "@types/react-dom": "^16.9.8",
+    "@typescript-eslint/eslint-plugin": "^2.x",
+    "@typescript-eslint/parser": "^2.x",
+    "babel-loader": "^8.0.0-beta.0",
+    "commitizen": "^4.1.2",
+    "common-tags": "^1.8.0",
+    "copyfiles": "^2.3.0",
+    "cross-env": "^7.0.2",
+    "cz-conventional-changelog": "^3.2.0",
+    "eslint": "^7.2.0",
+    "eslint-config-taro": "3.0.0-rc.4",
+    "eslint-plugin-import": "^2.21.2",
+    "eslint-plugin-react": "^7.20.0",
+    "eslint-plugin-react-hooks": "^4.0.4",
+    "husky": "^4.2.5",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^26.3.0",
+    "lint-staged": "^10.2.11",
+    "nerv-server": "^1.5.7",
+    "rimraf": "3.0.2",
+    "stylelint": "13.6.0",
+    "stylelint-config-standard": "20.0.0",
+    "stylelint-scss": "3.17.2",
+    "ts-jest": "^26.2.0",
+    "typescript": "^3.9.5"
+  },
+  "peerDependencies": {
+    "@tarojs/components": ">=3.0.0-rc.4",
+    "@tarojs/react": ">=3.0.0-rc.4",
+    "react": ">=16.13.0",
+    "react-dom": ">=16.13.0"
+  },
+  "lint-staged": {
+    "packages/components/**/*.ts?(x)": [
+      "prettier --write",
+      "eslint --fix",
+      "git add"
+    ],
+    "packages/components/**/*.less": [
+      "stylelint --syntax less --fix",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  }
+}

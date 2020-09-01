@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Skeleton render Skeleton -- props contentAlignStyle(left) 1`] = `undefined`;
+
+exports[`Skeleton render Skeleton -- props type(column) 1`] = `undefined`;

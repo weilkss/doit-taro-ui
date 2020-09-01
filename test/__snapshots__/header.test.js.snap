@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header render Header -- props backgroundColor(#333) 1`] = `undefined`;
+
+exports[`Header render Header -- props color(#fff) 1`] = `undefined`;
