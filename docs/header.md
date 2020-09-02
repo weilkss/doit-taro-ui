@@ -50,12 +50,13 @@ export default {
 // 你本地的图标
 import backIcon from 'image/back_icon.png'
 import homeIcon from 'image/home_icon.png'
-;<Header backIcon={backIcon} homeIcon={homeIcon}>
+
+<Header backIcon={backIcon} homeIcon={homeIcon}>
   首页
 </Header>
 ```
 
-**注意：**小程序中，由于需要判断是 `tabbar` 页面，没有返回主页的图标，所以 `tabbar` 页面必须传参 `hasTabbar`
+**注意：** 小程序中，由于需要判断是 `tabbar` 页面，没有返回主页的图标，所以 `tabbar` 页面必须传参 `hasTabbar`
 
 ```js
 <Header hasTabbar>首页</Header>
