@@ -1,10 +1,10 @@
-import { FC, ReactChildren } from 'react'
+import { FC } from 'react'
 
 declare const iconBase64: string
 declare const selectIconBase64: string
 
-export type IconType = iconBase64
-export type SelectIconType = selectIconBase64
+export type IconType = string
+export type SelectIconType = string
 /**
  * @param {string} large    大
  * @param {string} middle   中
@@ -14,7 +14,7 @@ export type Size = 'large' | 'middle' | 'small'
 
 export type StarArray = string[]
 
-export interface StarProps {
+export interface RateProps {
   /**
    * @description 最大星星数目
    * @type {number}
@@ -53,13 +53,13 @@ export interface StarProps {
    * @description 改变事件回调
    * @type {void}
    */
-  onChange?: () => void
+  onChange?: (value: number) => void
 }
 
-export interface StarState {
+export interface rateState {
   count: number
 }
 
-declare const Star: FC<StarProps>
+declare const Star: FC<RateProps>
 
 export default Star

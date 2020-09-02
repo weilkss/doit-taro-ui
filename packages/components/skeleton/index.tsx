@@ -104,8 +104,10 @@ export default function Skeleton(props: SkeletonProps) {
 
   const rootClass = classnames('doit-skeleton', 'doit-skeleton-custom-class', {
     [`doit-skeleton-type-${props.type}`]: true,
-    'doit-skeleton-animate-blink': props.animate && props.animateName === 'blink',
-    'doit-skeleton-animate-elastic': props.animate && props.animateName === 'elastic'
+    'doit-skeleton-animate-blink':
+      props.animate && props.animateName === 'blink',
+    'doit-skeleton-animate-elastic':
+      props.animate && props.animateName === 'elastic'
   })
   return (
     <View className={rootClass}>

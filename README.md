@@ -74,6 +74,7 @@ require('doit-taro-ui/dist/components/skeleton/index.less');
 
 - [骨架屏 Skeleton](./docs/skeleton.md)
 - [头部导航 Header](./docs/header.md)
+- [评分 Rate](./docs/rate.md)
 
 ## 贡献
 

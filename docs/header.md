@@ -70,4 +70,4 @@ import homeIcon from 'image/home_icon.png'
 | backIcon | 返回的icon图标地址  | `string base64` | `null` | 
 | homeIcon | 主页的icon图标地址  | `string base64` | `null` | 
 | hasTabbar | 是否是tab页面，如果是tabbar页面请传参hasTabbar  | `boolean` | `false` | 
-| children | 默认标题文案  | `string` | `''` | 
+| children | 默认标题文案  | `string` | `-` | 
